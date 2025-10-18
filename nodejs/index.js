@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const exec = require("child_process").exec;
-const subtxt = `${process.env.HOME}/agsb/jh.txt`
+const subtxt = `${process.env.HOME}/agsbx/jh.txt`
 const PORT = process.env.PORT || 9002;; 
 
 // Run start.sh
@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
         if (err) {
           console.error(err);
           res.writeHead(500, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ error: 'Error reading agsb/jh.txt' }));
+          res.end(JSON.stringify({ error: 'Error reading agsbx/jh.txt' }));
         } else {
           res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
           res.end(data);
