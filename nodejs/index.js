@@ -3,18 +3,7 @@ const http = require('http');
 const fs = require('fs');
 const net = require('net');
 const { exec, execSync } = require('child_process');
-
-function ensureModule(name) {
-    try {
-        require.resolve(name);
-    } catch (e) {
-        console.log(`Module '${name}' not found. Installing...`);
-        execSync(`npm install ${name}`, { stdio: 'inherit' });
-    }
-}
-ensureModule('ws');
 const { WebSocket, createWebSocketStream } = require('ws');
-
 const subtxt = `${process.env.HOME}/agsbx/jh.txt`;
 const NAME = process.env.NAME || os.hostname();
 const PORT = process.env.PORT || 9002;
