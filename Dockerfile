@@ -2,7 +2,7 @@
 FROM node:20-slim
 
 ENV NODE_ENV=production
-ENV PORT=8080
+ENV PORT=55036
 
 WORKDIR /app
 
